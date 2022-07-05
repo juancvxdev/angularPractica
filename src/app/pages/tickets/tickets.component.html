@@ -1,0 +1,38 @@
+<div class="container">
+    <form action="action_page.php">
+  
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Placa</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="placa" name="placa" placeholder="Ingrese la placa" [(ngModel)]="vehiculo.placa">
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Marca</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="marca" name="marca" placeholder="Ingrese la marca" [(ngModel)]="vehiculo.marca">
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-25">
+          <label for="age">Color</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="color" name="color" placeholder="Ingrese el color" [(ngModel)]="vehiculo.color">
+        </div>
+      </div>
+
+  
+
+      <div class="row">
+        <input type="button" value="Submit" (click)="doGuardar()">
+      </div>
+  
+    </form>
+  </div>

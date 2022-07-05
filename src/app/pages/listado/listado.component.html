@@ -1,0 +1,29 @@
+<p>listado works!</p>
+<table class="default">
+    <tr>
+        <th>Codigo</th>
+        <th>Fecha Ingreso</th>
+        <th></th>
+    </tr>
+    <tr  *ngFor="let ticket of tickets | async">
+        <td>{{ticket.codigo}}</td>
+        <td>{{ticket.fechaIngreso}}</td>
+        <td><button class="btn btn-info" (click)="doRetirar(ticket.codigo)">RETIRAR</button></td>
+    </tr>
+</table>
+<table class="default">
+    <tr>
+        <th>Codigo</th>
+        <th>Fecha Ingreso</th>
+        <th>Fecha Salida</th>
+        <th>Total</th>
+    </tr>
+    <tr  *ngFor="let ticket of tickets | async">
+        <td>{{ticket.codigo}}</td>
+        <td>{{ticket.fechaIngreso}}</td>
+        <td>{{ticket.fechaSalida}}</td>
+        <td>{{ticket.total}}</td>
+
+    </tr>
+</table>
+<button (click)="goTickets()">Crear nuevo</button>
